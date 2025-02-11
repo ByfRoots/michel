@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contador de Dias</title>
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+h1 {
+  color: #333;
+}
+#contador {
+  font-size: 48px;
+  color: #007bff;
+  margin-top: 20px;
+}
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+</style>
+</head>
+<body>
+
+<h1>Bem-vindo ao Contador de Dias</h1>
+
+<div id="contador">0</div>
+
+<p>
+  Este é um exemplo de texto que você pode usar para explicar o que está acontecendo com o contador.
+  Você pode adicionar mais informações aqui, como por que o contador está aumentando e qual é o objetivo final.
+</p>
+
+<script>
+let contador = 0;
+const contadorElement = document.getElementById('contador');
+
+function atualizarContador() {
+  contador += 3;
+  if (contador > 1000000) {
+    contador = 1000000;
+  }
+  contadorElement.textContent = contador;
+}
+
+setInterval(atualizarContador, 24 * 60 * 60 * 1000); // Atualiza a cada 24 horas
+
+// Exibe o valor inicial do contador
+atualizarContador();
+</script>
+
+</body>
+</html>
